@@ -1,3 +1,6 @@
+// import {url} from "./secret.js"
+console.log(url);
+
 document.addEventListener("DOMContentLoaded", fetchQuote);
 
 const quoteText = document.getElementById("quote-text");
@@ -26,7 +29,7 @@ async function fetchQuote() {
 // Set a random background image
 async function setRandomBackground() {
   try {
-    const randomImageUrl = `https://api.unsplash.com/photos/random/?client_id=vMPWP2iGRujsFV6yKR8IStA-oGxfTcXUVY-mmaupHUw`;
+    const randomImageUrl = `https://api.unsplash.com/photos/random/?client_id=${url}`;
     const response = await fetch(randomImageUrl);
     const randomImage = await response.json();
     const imaContainer = randomImage.urls.regular;
