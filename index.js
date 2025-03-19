@@ -1,5 +1,5 @@
 // import {url} from "./secret.js"
-console.log(url);
+// console.log(url);
 
 document.addEventListener("DOMContentLoaded", fetchQuote);
 
